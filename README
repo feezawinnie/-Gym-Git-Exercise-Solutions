@@ -3,5 +3,135 @@
 
 ```bash
 
+HP@DESKTOP-2LSM5OO MINGW64 /
+$ cd ~
+
+HP@DESKTOP-2LSM5OO MINGW64 ~ (main)
+$ mkdir Git-work
+mkdir: cannot create directory ‘Git-work’: File exists
+
+HP@DESKTOP-2LSM5OO MINGW64 ~ (main)
+$ mkdir git-exercise
+
+HP@DESKTOP-2LSM5OO MINGW64 ~ (main)
+$ cd git-exercise
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git init
+Initialized empty Git repository in C:/Users/HP/git-exercise/.git/
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (master)
+$ git branch -m main master \
+>
+fatal: no branch named 'main'
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (master)
+$ git branch -m main master
+fatal: no branch named 'main'
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (master)
+$ git branch -m master main
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git branch -m main master
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (master)
+$ git branch branch -m master main
+fatal: too many arguments for a rename operation
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (master)
+$ git branch -m master main
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git add .
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ code .
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git commit -m "initail commit got exercie 1"
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git add .
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git commit -m "initial git-work"
+[main (root-commit) 46e2cec] initial git-work
+ 1 file changed, 7 insertions(+)
+ create mode 100644 README
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git add remote origin https://github.com/feezawinnie/-Gym-Git-Exercise-Solutions.git
+fatal: pathspec 'remote' did not match any files
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git add .
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git commit -m "initial git-work"
+On branch main
+nothing to commit, working tree clean
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ ls \
+>
+README
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ ls
+README
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (main)
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (dev)
+$ git checkout -b test
+Switched to a new branch 'test'
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (test)
+$ git checkout dev
+Switched to branch 'dev'
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (dev)
+$ git branch -d test
+Deleted branch test (was 46e2cec).
+
+HP@DESKTOP-2LSM5OO MINGW64 ~/git-exercise (dev)
+$
 
 ```
