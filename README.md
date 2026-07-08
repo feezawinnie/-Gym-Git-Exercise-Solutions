@@ -464,3 +464,10 @@ HP@DESKTOP-2LSM5OO MINGW64 ~/OneDrive/Feezaz work/thegym/git-exercise/git-work (
 $
 
 ```
+
+##BUNDLE 2
+##EXERCISE 1
+
+```bash
+  git
+```
