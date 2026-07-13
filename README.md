@@ -397,22 +397,6 @@ hint: have locally. This is usually caused by another repository pushing to
 hint: the same ref. If you want to integrate the remote changes, use
 hint: 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
@@ -469,5 +453,145 @@ $
 ##EXERCISE 1
 
 ```bash
-  git
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ git checkout main
+M       README.md
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+gi
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (ft/bundle-2)
+$ git branch
+* ft/bundle-2
+  main
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (ft/bundle-2)
+$ touch services.html
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (ft/bundle-2)
+$ git add .
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (ft/bundle-2)
+$ git commit -m "bundle-2- exercise"
+[ft/bundle-2 8e0331a] bundle-2- exercise
+ 2 files changed, 18 insertions(+)
+ create mode 100644 services.html
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (ft/bundle-2)
+$ git push -u origin ft/bundle-2
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 636 bytes | 636.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/feezawinnie/-Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/feezawinnie/-Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 892 bytes | 17.00 KiB/s, done.
+From https://github.com/feezawinnie/-Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+   09c890b..cad7d15  main       -> origin/main
+Updating 09c890b..cad7d15
+Fast-forward
+ README.md     |  7 +++++++
+ services.html | 11 +++++++++++
+ 2 files changed, 18 insertions(+)
+ create mode 100644 services.html
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ git branch -d ft/bundle-2
+Deleted branch ft/bundle-2 (was 8e0331a).
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ git barnch
+git: 'barnch' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ git branch
+* main
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ git log --online --decorate --graph --all
+fatal: unrecognized argument: --online
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ got log --oneline --decorate --graph --all
+bash: got: command not found
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ git --oneline --decorate --graph --all
+unknown option: --oneline
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
+           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
+           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ ^C
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ git log --oneline --decorate --graph --all
+*   cad7d15 (HEAD -> main, origin/main) Merge pull request #1 from feezawinnie/ft/bundle-2
+|\
+| * 8e0331a (origin/ft/bundle-2) bundle-2- exercise
+|/
+* 09c890b exercise two terminal codes
+*   ba08575 Please enter a commit message to explain why this merge is necessary,
+|\
+| * fad4ca9 initial commit
+* 551e6ca stashed files
+* dba3b5e readme added
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$ ^C
+
+HP@DESKTOP-2LSM5OO MINGW64 /e/thegym/git-exercise/git-work (main)
+$
+
+```
+
+##EXERCISE-2
+
+```
+
 ```
